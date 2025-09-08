@@ -1,13 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../App.css';
+import MyForm from '../form';
+import { useHistory } from 'react-router-dom';
+
 
 function App() {
+
+const history = useHistory();
+
   return (
     <div className="App">
       <header className="App-header">
+        <button onClick={() => history.push('/')}>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+</button>
+        <p className='App-body'>
+         <MyForm />
         </p>
         <a
           className="App-link"
@@ -15,7 +23,6 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
         </a>
       </header>
     </div>
