@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./Header.css";
+import "./styles/Header.css";
+import { useLocation } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,9 +9,20 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
+  const location = useLocation();
+  const routeTitles = {
+    "/": "Home",
+    "/app": "App",
+    "/contact": "Contact",
+  };
+
+  // Default fallback if path doesn’t match
+  const headerName = routeTitles[location.pathname] || "App";
+
+
   return (
     <header className="header">
-      <h1 className="logo">My App</h1>
+      <h1 className="logo">{headerName}</h1>
       <nav className="nav">
         <button className="dropdown-btn" onClick={toggleDropdown}>
           Menu ▼

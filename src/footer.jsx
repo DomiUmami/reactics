@@ -1,29 +1,28 @@
-import React, { useState } from "react";
-import "./Header.css";
+import "./styles/Footer.css";
 
 function Footer() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
-    <header className="header">
-      <h1 className="logo">My App</h1>
-      <nav className="nav">
-        <button className="dropdown-btn" onClick={toggleDropdown}>
-          Menu ▼
-        </button>
-        {isOpen && (
-          <ul className="dropdown-menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/app">App</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        )}
-      </nav>
-    </header>
+    <footer className="footer">
+        <p>
+    Find me:{" "}
+    <a href="https://www.linkedin.com/in/dominikwilliams/">
+      LinkedIn
+    </a>
+  </p>
+        <p>
+  Contact me:
+  {" "}
+  <a  href="https://mail.google.com/mail/?view=cm&fs=1&to=duminimum@gmail.com&su=Hello&body=I%20saw%20your%20portfolio..."
+      target="_blank"
+      rel="noopener noreferrer"
+  >
+    duminimum@gmail.com
+  </a>
+</p>
+
+        
+        </footer>
   );
 }
 
