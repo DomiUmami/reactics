@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles/Header.css";
+import "../styles/Header.css";
 import { useLocation } from "react-router-dom";
 
 function Header() {

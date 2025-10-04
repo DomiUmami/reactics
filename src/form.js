@@ -331,10 +331,6 @@ function MyForm() {
       <button type="submit" >Submit Application</button>
       </div>
 
-      <footer className='App-footer'>
-        Footer:
-      </footer>
-
     </form>
   );
 }

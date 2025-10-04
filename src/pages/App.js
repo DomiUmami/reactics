@@ -1,7 +1,9 @@
-import logo from '../logo.svg';
+import logo from '../images/logo512.png';
 import '../styles/App.css';
 import MyForm from '../form';
 import { useHistory } from 'react-router-dom';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 
 function App() {
@@ -10,10 +12,7 @@ const history = useHistory();
 
   return (
     <div className="App">
-      <header className="App-header">
-        <button onClick={() => history.push('/')}>
-        <img src={logo} className="App-logo" alt="logo" />
-</button>
+      <Header></Header>
         <p className='App-body'>
          <MyForm />
         </p>
@@ -24,7 +23,7 @@ const history = useHistory();
           rel="noopener noreferrer"
         >
         </a>
-      </header>
+        <Footer></Footer>
     </div>
   );
 }
