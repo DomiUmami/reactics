@@ -14,6 +14,7 @@ function Header() {
     "/": "Home",
     "/app": "App",
     "/contact": "Contact",
+    "/verity": "Verity",
   };
 
   // Default fallback if path doesn’t match
@@ -32,6 +33,7 @@ function Header() {
             <li><a href="/">Home</a></li>
             <li><a href="/app">App</a></li>
             <li><a href="/contact">Contact</a></li>
+            <li><a href="/verity">Verity</a></li>
           </ul>
         )}
       </nav>
