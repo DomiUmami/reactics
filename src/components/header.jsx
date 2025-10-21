@@ -26,7 +26,7 @@ const history = useHistory();
   return (
     <header className="header">
       <h1 className="logo" 
-        onClick={() => history.push("/")}
+        onClick={() => history.push("https://duminimumreactics.vercel.app/")}
         style={{ cursor: "pointer" }}
           >{headerName}
       </h1>
@@ -38,7 +38,7 @@ const history = useHistory();
           <ul className="dropdown-menu">
             <li><a href="/">Home</a></li>
             <li><a href="/cred">Credentialing</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="https://duminimumcontact.vercel.app/contact">Contact</a></li>
             <li><a href="/verity">Verity</a></li>
           </ul>
         )}
