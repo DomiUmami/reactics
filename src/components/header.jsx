@@ -21,14 +21,15 @@ const history = useHistory();
 
   // Default fallback if path doesn’t match
   const headerName = routeTitles[location.pathname] || "App";
-
+ const goHome = () => {
+    // External link (different domain)
+    window.location.href = "https://duminimumreactics.vercel.app/";
+  };
 
   return (
-    <header className="header">
-      <h1 className="logo" 
-        onClick={() => history.push("https://duminimumreactics.vercel.app/")}
-        style={{ cursor: "pointer" }}
-          >{headerName}
+       <header className="header">
+      <h1 className="logo" onClick={goHome} style={{ cursor: "pointer" }}>
+        {headerName}
       </h1>
       <nav className="nav">
         <button className="dropdown-btn" onClick={toggleDropdown}>
