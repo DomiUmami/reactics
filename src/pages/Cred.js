@@ -1,14 +1,14 @@
-import logo from '../images/logo512.png';
+//import logo from '../images/logo512.png';
 import '../styles/App.css';
-import MyForm from '../form';
-import { useHistory } from 'react-router-dom';
+import MyForm from '../components/form';
+//import { useHistory } from 'react-router-dom';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
 
-function App() {
+function Cred() {
 
-const history = useHistory();
+//const history = useHistory();
 
   return (
     <div className="App">
@@ -28,4 +28,4 @@ const history = useHistory();
   );
 }
 
-export default App;
+export default Cred;

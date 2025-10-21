@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles/App.css';
+import '../styles/App.css';
 
 function MyForm() {
   const [formData, setFormData] = useState({
@@ -63,7 +63,7 @@ function MyForm() {
   return (
     
     <form>
-      <h2>Application Form</h2>
+      <h2>Credentialing Form</h2>
       <div className="application-form" onSubmit={handleSubmit}>
 
 	<h3>Practice Application</h3>
@@ -103,7 +103,7 @@ function MyForm() {
       </label>
 </div>
 <div className="application-form" onSubmit={handleSubmit}>
-	<h3>Dentist Information</h3>
+	<h3>Provider Information</h3>
   <div className="row-form-group">
 	<label>
         ID:
@@ -143,13 +143,13 @@ function MyForm() {
 </div>
 <div  className="row-form-group">
 <label>
-        Dentist Home Address:
+        Provider Home Address:
         <input type="text" name="homeaddress" value={formData.homeaddress} onChange={handleChange} />
       </label>
 </div>
 <div  className="row-form-group">
 <label>
-        Dentist Place of Birth:
+        Provider Place of Birth:
         <input type="text" name="birthplace" value={formData.birthplace} onChange={handleChange} />
       </label>
 </div>

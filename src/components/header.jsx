@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Header.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,10 +9,12 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
+const history = useHistory();
+
   const location = useLocation();
   const routeTitles = {
     "/": "Home",
-    "/app": "App",
+    "/cred": "Credentialing App",
     "/contact": "Contact",
     "/verity": "Verity",
   };
@@ -23,7 +25,11 @@ function Header() {
 
   return (
     <header className="header">
-      <h1 className="logo">{headerName}</h1>
+      <h1 className="logo" 
+        onClick={() => history.push("/")}
+        style={{ cursor: "pointer" }}
+          >{headerName}
+      </h1>
       <nav className="nav">
         <button className="dropdown-btn" onClick={toggleDropdown}>
           Menu ▼
@@ -31,7 +37,7 @@ function Header() {
         {isOpen && (
           <ul className="dropdown-menu">
             <li><a href="/">Home</a></li>
-            <li><a href="/app">App</a></li>
+            <li><a href="/cred">Credentialing</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="/verity">Verity</a></li>
           </ul>
