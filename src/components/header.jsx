@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Header.css";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,6 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
-const history = useHistory();
 
   const location = useLocation();
   const routeTitles = {
@@ -17,6 +16,7 @@ const history = useHistory();
     "/cred": "Credentialing App",
     "/contact": "Contact",
     "/verity": "Verity",
+    "/osiris" : "Osiris"
   };
 
   // Default fallback if path doesn’t match
@@ -40,6 +40,7 @@ const history = useHistory();
             <li><a href="/">Home</a></li>
             <li><a href="/cred">Credentialing</a></li>
             <li><a href="https://duminimumcontact.vercel.app/contact">Contact</a></li>
+            <li><a href="https://duminimumosiris.vercel.app">Osiris</a></li>
             <li><a href="/verity">Verity</a></li>
           </ul>
         )}
